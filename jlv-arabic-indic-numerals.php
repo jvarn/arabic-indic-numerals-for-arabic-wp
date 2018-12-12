@@ -41,8 +41,8 @@ function convert_numbers_to_arabic( $string ) {
  * @param string	$the_date the date as returned by get_the_time or get_the_date
  * @return string	The date with Arabic numbers
  */
-function make_arabic_date( $the_date ) {
-	if ( get_bloginfo( 'language' ) == 'ar' ) {
+function make_arabic_date( $the_date, $force=null ) {
+	if ( get_bloginfo( 'language' ) == 'ar' || $force ) {
 		$the_date = convert_numbers_to_arabic( $the_date );
 	}
 	return $the_date;
@@ -61,7 +61,7 @@ add_filter( 'get_the_date', 'make_arabic_date' );
  */
 function jlv_arabic_date_shortcode( $atts ) {
 	$the_date = get_the_date();
-	return make_arabic_date( $the_date );
+	return make_arabic_date( $the_date, true );
 }
 add_shortcode( 'arabic_date', 'jlv_arabic_date_shortcode' );
 
