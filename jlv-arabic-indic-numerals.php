@@ -9,6 +9,7 @@
  * License: GPL2
  * Text Domain: arabic-indic-numerals-for-arabic-wp
  * Domain Path: /languages
+ * Github Plugin URI: https://github.com/jvarn/arabic-indic-numerals-for-arabic-wp
  *
  * For the sake of simplicity let's just say English numbers and Arabic numbers.
  */
