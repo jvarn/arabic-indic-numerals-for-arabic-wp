@@ -34,6 +34,8 @@ No, the dates will only be modified on parts of your site where the blog languag
 2. Example of date on Twenty Fourteen theme with the plugin.
 
 == Changelog ==
+= 1.0.2 =
+* Added POT file
 
 = 1.0.0 =
 * Added shortcode to display the post date in Arabic

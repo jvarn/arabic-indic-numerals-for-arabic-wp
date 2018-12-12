@@ -3,7 +3,7 @@
  * Plugin Name: Arabic-Indic Numerals for Arabic Wordpress
  * Plugin URI: https://github.com/jvarn/arabic-indic-numerals-for-arabic-wp
  * Description: Converts numbers in dates into Arabic-Indic numerals
- * Version: 1.0.1
+ * Version: 1.0.2
  * Author: Jeremy Varnham
  * Author URI: https://abuyasmeen.com/
  * License: GPL2
