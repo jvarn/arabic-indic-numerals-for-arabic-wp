@@ -2,7 +2,7 @@
 Contributors: jvarn13
 Tags: arabic, numbers, numerals, أرقام، عربية، هندية
 Requires at least: 1.5
-Tested up to: 5.0
+Tested up to: 5.7.2
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -34,6 +34,9 @@ No, the dates will only be modified on parts of your site where the blog languag
 2. Example of date on Twenty Fourteen theme with the plugin.
 
 == Changelog ==
+= 1.0.3 =
+* Added Arabic-style comma substitution (kudos https://github.com/aitohamy)
+
 = 1.0.2 =
 * Added POT file
 

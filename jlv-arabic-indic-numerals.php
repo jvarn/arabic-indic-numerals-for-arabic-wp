@@ -3,7 +3,7 @@
  * Plugin Name: Arabic-Indic Numerals for Arabic Wordpress
  * Plugin URI: https://github.com/jvarn/arabic-indic-numerals-for-arabic-wp
  * Description: Converts numbers in dates into Arabic-Indic numerals
- * Version: 1.0.2
+ * Version: 1.0.3
  * Author: Jeremy Varnham
  * Author URI: https://abuyasmeen.com/
  * License: GPL2
@@ -27,9 +27,9 @@ if ( !defined( 'WPINC' ) ) {
  * @return string	A string containing Arabic numbers
  */
 function convert_numbers_to_arabic( $string ) {
-	$arabic_numbers = array('٠', '۱', '۲', '۳', '٤', '٥', '٦', '۷', '۸', '۹', '.', '،');
+	$arabic_numbers = array('۰', '۱', '۲', '۳', '٤', '۵', '٦', '۷', '۸', '۹', '.', '،');
 	$english_numbers = array('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.', ',');
-	return str_replace($english_numbers, $arabic_numbers, $string);;
+	return str_replace( $english_numbers, $arabic_numbers, $string );
 }
 
 /**
@@ -47,10 +47,12 @@ function make_arabic_date( $the_date, $force=null ) {
 	}
 	return $the_date;
 }
+
 if( !is_admin() ){
-add_filter( 'get_the_time', 'make_arabic_date' );
-add_filter( 'get_the_date', 'make_arabic_date' );
+	add_filter( 'get_the_time', 'make_arabic_date' );
+	add_filter( 'get_the_date', 'make_arabic_date' );
 }
+
 /**
  * Shortcode for inserting a the Arabic date of the current post.
  * [arabic_date]
