@@ -9,7 +9,6 @@
  * License: GPL2
  * Text Domain: arabic-indic-numerals-for-arabic-wp
  * Domain Path: /languages
- * Github Plugin URI: https://github.com/jvarn/arabic-indic-numerals-for-arabic-wp
  *
  * For the sake of simplicity let's just say English numbers and Arabic numbers.
  */
@@ -28,9 +27,9 @@ if ( !defined( 'WPINC' ) ) {
  * @return string	A string containing Arabic numbers
  */
 function convert_numbers_to_arabic( $string ) {
-	$arabic_numbers = array('۰', '۱', '۲', '۳', '٤', '۵', '٦', '۷', '۸', '۹', '.');
-	$english_numbers = array('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.');
-	return str_replace($english_numbers, $arabic_numbers, $string);
+	$arabic_numbers = array('٠', '۱', '۲', '۳', '٤', '٥', '٦', '۷', '۸', '۹', '.', '،');
+	$english_numbers = array('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.', ',');
+	return str_replace($english_numbers, $arabic_numbers, $string);;
 }
 
 /**
@@ -48,9 +47,10 @@ function make_arabic_date( $the_date, $force=null ) {
 	}
 	return $the_date;
 }
+if( !is_admin() ){
 add_filter( 'get_the_time', 'make_arabic_date' );
 add_filter( 'get_the_date', 'make_arabic_date' );
-
+}
 /**
  * Shortcode for inserting a the Arabic date of the current post.
  * [arabic_date]
